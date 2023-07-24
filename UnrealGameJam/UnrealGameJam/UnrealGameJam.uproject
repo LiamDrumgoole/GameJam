@@ -1,6 +1,6 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "{ED6B1386-4C85-C57C-CE5E-839BF886CFE7}",
+	"EngineAssociation": "{EF052AAA-463D-4573-B1D8-8BB76AFD2B24}",
 	"Category": "",
 	"Description": "",
 	"Modules": [
@@ -11,6 +11,12 @@
 			"AdditionalDependencies": [
 				"Engine"
 			]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "NiagaraExtras",
+			"Enabled": true
 		}
 	]
 }
