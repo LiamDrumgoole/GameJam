@@ -24,5 +24,7 @@ void UPlayerAbilities::BeginPlay()
 void UPlayerAbilities::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+	
+	
 }
 
