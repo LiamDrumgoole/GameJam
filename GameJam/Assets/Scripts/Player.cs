@@ -36,9 +36,9 @@ public class Player : MonoBehaviour
             rb.AddForce(Vector3.up * (jumpHeight * 100));
         }
 
-        if (isGliding)
+        if (isGliding && rb.velocity.y < 0)
         {
-            
+            rb.velocity = new Vector3(rb.velocity.x, Mathf.Sign(rb.velocity.y), rb.velocity.z);
         }
     }
 
