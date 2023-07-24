@@ -17,8 +17,6 @@ UPlayerAbilities::UPlayerAbilities()
 void UPlayerAbilities::BeginPlay()
 {
 	Super::BeginPlay();
-	// ...
-	
 }
 
 
@@ -26,11 +24,5 @@ void UPlayerAbilities::BeginPlay()
 void UPlayerAbilities::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
-	zVel = GetOwner()->GetVelocity().Z;
-	
-	if(isGliding && zVel < 0)
-	{
-	}
 }
 
