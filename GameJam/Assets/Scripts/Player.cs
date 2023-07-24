@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,8 +6,11 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public int moveSpeed;
-
+    public int jumpHeight;
+    
     private Rigidbody rb;
+
+    public bool isGrounded = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +31,18 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            rb.AddForce(Vector3.up * 500);
+            rb.AddForce(Vector3.up * (jumpHeight * 100));
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+            isGrounded = true;
+    }
+
+    private void OnCollisionExit(Collision other)
+    {
+        isGrounded = false;
     }
 }
