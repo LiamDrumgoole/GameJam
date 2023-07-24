@@ -9,8 +9,8 @@ public class Player : MonoBehaviour
     public int jumpHeight;
     
     private Rigidbody rb;
-
-    public bool isGrounded = false;
+    private bool isGrounded = false;
+    private bool isGliding = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,18 +20,25 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Move Left
         if (Input.GetKey(KeyCode.A))
         {
             transform.position -= new Vector3(moveSpeed * 0.01f, 0, 0);
         }
+        // Move Right
         if (Input.GetKey(KeyCode.D))
         {
             transform.position += new Vector3(moveSpeed * .01f, 0, 0);
         }
-
-        if (Input.GetKeyDown(KeyCode.Space))
+        // Jump
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.AddForce(Vector3.up * (jumpHeight * 100));
+        }
+
+        if (isGliding)
+        {
+            
         }
     }
 
