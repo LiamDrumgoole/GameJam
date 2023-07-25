@@ -18,9 +18,7 @@ AEnemyActor::AEnemyActor()
 void AEnemyActor::BeginPlay()
 {
 	Super::BeginPlay();
-	NavArea = FNavigationSystem::GetCurrent<UNavigationSystemV1>(this);
-
-	MoveToRandomLocation();
+	//RunBehaviourTree(BehaviorTree);
 	
 }
 
@@ -35,9 +33,7 @@ void AEnemyActor::MoveToRandomLocation()
 {
 	if(NavArea)
 	{
-		NavArea->K2_GetRandomLocationInNavigableRadius(GetWorld(), GetPawn()-> GetActorLocation(),
-			RandomLocation, 1000.0f);
-		MoveToLocation(RandomLocation);
+	
 	}
 }
 

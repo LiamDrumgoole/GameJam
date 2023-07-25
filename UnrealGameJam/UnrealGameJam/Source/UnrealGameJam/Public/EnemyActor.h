@@ -16,6 +16,7 @@ public:
 	AEnemyActor();
 
 protected:
+	
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
@@ -30,4 +31,7 @@ public:
 	void MoveToRandomLocation();
 
 	void MoveToPlayer();
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	class UBehaviorTree* BehaviorTree;
 };
