@@ -1,9 +1,10 @@
-#include "PlayerAbilities.h"
-#include "GameFramework/CharacterMovementComponent.h"
+// Fill out your copyright notice in the Description page of Project Settings.
 
+
+#include "PlayerFunctions.h"
 
 // Sets default values for this component's properties
-UPlayerAbilities::UPlayerAbilities()
+UPlayerFunctions::UPlayerFunctions()
 {
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
@@ -14,17 +15,26 @@ UPlayerAbilities::UPlayerAbilities()
 
 
 // Called when the game starts
-void UPlayerAbilities::BeginPlay()
+void UPlayerFunctions::BeginPlay()
 {
 	Super::BeginPlay();
+
+	// ...
+	
 }
 
 
 // Called every frame
-void UPlayerAbilities::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
+void UPlayerFunctions::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-	
+
+	// ...
+}
+
+void UPlayerFunctions::SlamCollision()
+{
 	
 }
+
 

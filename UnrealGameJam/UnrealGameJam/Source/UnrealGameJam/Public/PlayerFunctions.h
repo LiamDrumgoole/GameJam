@@ -2,22 +2,19 @@
 
 #pragma once
 
-#include <Actor.h>
-
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "GameFramework/CharacterMovementComponent.h"
-#include "PlayerAbilities.generated.h"
+#include "PlayerFunctions.generated.h"
 
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class UNREALGAMEJAM_API UPlayerAbilities : public UActorComponent
+class UNREALGAMEJAM_API UPlayerFunctions : public UActorComponent
 {
 	GENERATED_BODY()
 
 public:	
 	// Sets default values for this component's properties
-	UPlayerAbilities();
+	UPlayerFunctions();
 
 protected:
 	// Called when the game starts
@@ -26,7 +23,7 @@ protected:
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
-	bool isGliding = true;
-	bool isGrounded = false;
-	int zVel;
+	UFUNCTION(BlueprintCallable) void SlamCollision();
+
+		
 };
