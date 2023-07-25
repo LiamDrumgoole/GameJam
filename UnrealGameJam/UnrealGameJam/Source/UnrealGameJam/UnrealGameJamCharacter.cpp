@@ -55,7 +55,7 @@ void AUnrealGameJamCharacter::SetupPlayerInputComponent(class UInputComponent* P
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
 	PlayerInputComponent->BindAxis("MoveRight", this, &AUnrealGameJamCharacter::MoveRight);
 
-	PlayerInputComponent->BindTouch(IE_Pressed, this, &AUnrealGameJamCharacter::TouchStarted);
+	PlayerInputComponent->BindTouch(IE_Released, this, &AUnrealGameJamCharacter::TouchStarted);
 	PlayerInputComponent->BindTouch(IE_Released, this, &AUnrealGameJamCharacter::TouchStopped);
 }
 
