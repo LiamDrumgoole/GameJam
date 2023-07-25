@@ -13,4 +13,9 @@ public:
 	Enemy();
 	~Enemy();
 	void Tick();
+
+	void BeginPlay();
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	class UBehaviorTree* BehaviorTree;
 };

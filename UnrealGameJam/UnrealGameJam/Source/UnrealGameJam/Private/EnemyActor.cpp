@@ -3,6 +3,9 @@
 
 #include "EnemyActor.h"
 
+#include <NavigationSystem.h>
+#include "GameFramework/Controller.h"
+
 // Sets default values
 AEnemyActor::AEnemyActor()
 {
@@ -15,6 +18,7 @@ AEnemyActor::AEnemyActor()
 void AEnemyActor::BeginPlay()
 {
 	Super::BeginPlay();
+	//RunBehaviourTree(BehaviorTree);
 	
 }
 
@@ -23,5 +27,18 @@ void AEnemyActor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+}
+
+void AEnemyActor::MoveToRandomLocation()
+{
+	if(NavArea)
+	{
+	
+	}
+}
+
+void AEnemyActor::MoveToPlayer()
+{
+	
 }
 
