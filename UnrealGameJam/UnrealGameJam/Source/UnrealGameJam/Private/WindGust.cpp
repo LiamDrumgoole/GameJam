@@ -32,3 +32,8 @@ void UWindGust::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompon
 	// ...
 }
 
+void UWindGust::RaisePlayer()
+{
+	
+}
+
