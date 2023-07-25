@@ -33,7 +33,9 @@ void UPlayerFunctions::TickComponent(float DeltaTime, ELevelTick TickType, FActo
 
 void UPlayerFunctions::SlamCollision()
 {
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Milk"));
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Milk!"));\
+
+	
 }
 
 
