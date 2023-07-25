@@ -18,7 +18,7 @@ UPlayerFunctions::UPlayerFunctions()
 void UPlayerFunctions::BeginPlay()
 {
 	Super::BeginPlay();
-
+	
 	// ...
 	
 }
@@ -28,13 +28,12 @@ void UPlayerFunctions::BeginPlay()
 void UPlayerFunctions::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
 	// ...
 }
 
 void UPlayerFunctions::SlamCollision()
 {
-	
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Milk"));
 }
 
 
