@@ -18,7 +18,7 @@ UPlayerFunctions::UPlayerFunctions()
 void UPlayerFunctions::BeginPlay()
 {
 	Super::BeginPlay();
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Screen Message"));
+	
 	// ...
 	
 }
@@ -28,13 +28,12 @@ void UPlayerFunctions::BeginPlay()
 void UPlayerFunctions::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-	SlamCollision();
 	// ...
 }
 
 void UPlayerFunctions::SlamCollision()
 {
-	UE_LOG(LogTemp, Warning, TEXT("Hello"));
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Milk"));
 }
 
 
