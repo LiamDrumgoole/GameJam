@@ -26,5 +26,4 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Player Functions")
 	void SlamCollision();
 
-		
 };

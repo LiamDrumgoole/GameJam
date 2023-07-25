@@ -18,7 +18,7 @@ UPlayerFunctions::UPlayerFunctions()
 void UPlayerFunctions::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	SpawnLocation = GetActorLocation();
 	// ...
 	
 }
