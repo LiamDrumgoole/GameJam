@@ -3,6 +3,9 @@
 
 #include "EnemyActor.h"
 
+#include <NavigationSystem.h>
+#include "GameFramework/Controller.h"
+
 // Sets default values
 AEnemyActor::AEnemyActor()
 {
@@ -15,6 +18,9 @@ AEnemyActor::AEnemyActor()
 void AEnemyActor::BeginPlay()
 {
 	Super::BeginPlay();
+	NavArea = FNavigationSystem::GetCurrent<UNavigationSystemV1>(this);
+
+	MoveToRandomLocation();
 	
 }
 
@@ -23,5 +29,20 @@ void AEnemyActor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+}
+
+void AEnemyActor::MoveToRandomLocation()
+{
+	if(NavArea)
+	{
+		NavArea->K2_GetRandomLocationInNavigableRadius(GetWorld(), GetPawn()-> GetActorLocation(),
+			RandomLocation, 1000.0f);
+		MoveToLocation(RandomLocation);
+	}
+}
+
+void AEnemyActor::MoveToPlayer()
+{
+	
 }
 

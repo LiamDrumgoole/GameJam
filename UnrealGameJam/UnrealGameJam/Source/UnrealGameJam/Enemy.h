@@ -13,4 +13,21 @@ public:
 	Enemy();
 	~Enemy();
 	void Tick();
+
+	bool playerDetected;
+	bool CanAttackPlayer;
+
+	UPROPERTY(BlueprintReadWrite)
+	bool CanDealDamage;
+
+	class AEnemyActor_AICharacter* PlayerREF;
+
+	UPROPERTY(EditAnywhere)
+	class USphereComponent* PlayerCollDetection;
+
+	UPROPERTY(EditAnywhere)
+	class USphereComponent* PlayerAtackCollDetection;
+
+	UPROPERTY(EditAnywhere)
+	class USphereComponent* DamageCol;
 };
